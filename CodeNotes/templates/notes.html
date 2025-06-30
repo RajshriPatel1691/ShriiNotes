@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ subject|capitalize }} Notes</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="typewriter">Welcome to ShriiNotes</div>
+  <div class="notes-card">
+    <h2>📘 {{ subject|capitalize }} Notes</h2>
+    <ul>
+      {% for note in notes %}
+        <li>
+          {{ note }}
+          <a class="download-btn" href="{{ url_for('download_note', subject=subject, filename=note) }}">⬇ Download</a>
+        </li>
+      {% endfor %}
+    </ul>
+    <a class="back-btn" href="/home">← Back to Home</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <div class="container">
+    <div class="typewriter">Welcome to ShriiNotes</div>
+  <div class="home-card">
+
+    <h2>Welcome {{ email }}!</h2>
+    <p>🚀 Start Exploring a Topic</p>
+    <ul>
+      <li><a href="/notes/html">📘 HTML</a></li>
+      <li><a href="/notes/css">🎨 CSS</a></li>
+      <li><a href="/notes/js">💡 JavaScript</a></li>
+      <li><a href="/notes/python">🐍 Python</a></li>
+      <li><a href="/notes/SQL">🛢️ SQL</a></li>
+    </ul>
+    <a href="/logout">Logout</a>
+  </div>
+</body>
+</html>
